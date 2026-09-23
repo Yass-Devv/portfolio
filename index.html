@@ -3,295 +3,597 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yassin Baligh | dev Web & IA</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
+    <title>Yassin Baligh — Développeur Full Stack à Genève</title>
+    <meta
+      name="description"
+      content="Yassin Baligh, développeur Full Stack à Genève, actuellement chez l'OIPC. Plus de 50 sites livrés. React, Java / Jakarta EE, Symfony, Laravel, PHP, SQL, Docker."
     />
+    <meta name="author" content="Yassin Baligh" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#07080c" />
+    <link rel="canonical" href="https://yass-devv.github.io/portfolio/" />
+
+    <!-- Open Graph / réseaux sociaux -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Yassin Baligh" />
+    <meta property="og:title" content="Yassin Baligh — Développeur Full Stack à Genève" />
+    <meta
+      property="og:description"
+      content="Développeur Full Stack chez l'OIPC Genève. React, Java / JEE, Symfony, Laravel, SQL, Docker."
+    />
+    <meta property="og:url" content="https://yass-devv.github.io/portfolio/" />
+    <meta property="og:image" content="https://yass-devv.github.io/portfolio/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Yassin Baligh — Développeur Full Stack" />
+    <meta property="profile:first_name" content="Yassin" />
+    <meta property="profile:last_name" content="Baligh" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Yassin Baligh — Développeur Full Stack à Genève" />
+    <meta
+      name="twitter:description"
+      content="Développeur Full Stack chez l'OIPC Genève. React, Java / JEE, Symfony, Laravel, SQL, Docker."
+    />
+    <meta name="twitter:image" content="https://yass-devv.github.io/portfolio/assets/og-image.png" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/og-image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yassin Baligh",
+        "givenName": "Yassin",
+        "familyName": "Baligh",
+        "jobTitle": "Développeur Full Stack",
+        "url": "https://yass-devv.github.io/portfolio/",
+        "email": "mailto:yassinbaligh7@gmail.com",
+        "worksFor": { "@type": "Organization", "name": "OIPC", "address": "Genève, Suisse" },
+        "alumniOf": [
+          { "@type": "EducationalOrganization", "name": "CREA Genève" },
+          { "@type": "EducationalOrganization", "name": "Lycée International de Ferney-Voltaire" }
+        ],
+        "address": { "@type": "PostalAddress", "addressLocality": "Genève", "addressCountry": "CH" },
+        "knowsAbout": [
+          "React", "JavaScript", "Vite", "Tailwind CSS", "Bootstrap", "Java", "Jakarta EE", "PHP", "Symfony", "Laravel",
+          "Python", "SQL", "Docker", "Git", "WordPress", "API REST", "MCP (Model Context Protocol)", "Développement web", "Intelligence artificielle"
+        ],
+        "sameAs": ["https://www.linkedin.com/in/yassin-baligh/", "https://github.com/Yass-Devv"]
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="email.min.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
+
   <body>
-    <div class="cursor-dot"></div>
+    <a class="skip-link" href="#main">Aller au contenu</a>
 
-    <div id="preloader">
-      <div class="loader-text"><span>YASSIN BALIGH.</span></div>
-    </div>
+    <div class="progress" aria-hidden="true"><span></span></div>
+    <div class="logo-rain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
 
-    <nav>
-      <div class="logo">YB.</div>
-      <div class="nav-links">
-        <a href="#about" class="hover-target">À propos</a>
-        <a href="#projects" class="hover-target">Projets</a>
-        <a href="#parcours" class="hover-target">Parcours</a>
-      </div>
-    </nav>
+    <header class="nav" id="top">
+      <a href="#top" class="nav-logo" aria-label="Yassin Baligh — retour en haut">
+        <span class="logo-mark">YB</span>
+        <span class="logo-text">Yassin Baligh</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#about">À propos</a>
+        <a href="#stack">Stack</a>
+        <a href="#projects">Projets</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#parcours">Parcours</a>
+      </nav>
+      <a href="#contact" class="btn btn-pill nav-cta" data-magnetic>
+        <span class="dot" aria-hidden="true"></span> Me contacter
+      </a>
+    </header>
 
-    <div class="container">
-      <section class="hero">
-        <div class="rotating-badge">
-          <svg viewBox="0 0 100 100">
-            <path
-              id="circlePath"
-              d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-              fill="transparent"
-            />
-            <text
-              font-size="12"
-              font-family="Manrope"
-              font-weight="600"
-              letter-spacing="3.5"
-            >
-              <textPath href="#circlePath">
-                OPEN TO WORK • CREA GENEVE •
-              </textPath>
-            </text>
-          </svg>
-        </div>
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-frame">
+          <canvas class="hero-canvas" aria-hidden="true"></canvas>
+          <div class="hero-shade" aria-hidden="true"></div>
 
-        <h1 class="reveal delay-1">Baligh<br />Yassin.</h1>
-
-        <div class="hero-details">
-          <div class="hero-meta reveal delay-2">
-            <span>Grand Genève, Ferney-Voltaire </span>
-            <span>Disponibilité : immédiatement</span>
+          <div class="hero-top">
+            <span class="mono">Portfolio / <span data-year>2026</span></span>
+            <span class="mono">Genève, CH — <span data-clock>--:--</span></span>
           </div>
-          <div class="hero-desc reveal delay-3">
-            Développeur Web & Logiciel. Je conçois des architectures backend
-            robustes et des interfaces minimalistes performantes.
-          </div>
-        </div>
-      </section>
-    </div>
 
-    <div class="marquee">
-      <div class="marquee-inner">
-        <span></span>C<span>•</span><span>PYTHON</span> <span>•</span>
-        <span>SQL</span> <span>•</span> <span>JAVA</span> <span>•</span>
-        <span>PHP</span> <span>•</span> <span>JAVASCRIPT</span> <span>•</span>
-        <span>DOCKER</span> <span>•</span> <span>GIT</span> <span>•</span>
-        <span>HTML/CSS</span> <span>•</span> <span>C</span> <span>•</span
-        ><span>PYTHON</span> <span>•</span> <span>SQL</span> <span>•</span>
-        <span>JAVA</span> <span>•</span> <span>PHP</span> <span>•</span>
-        <span>JAVASCRIPT</span> <span>•</span> <span>DOCKER</span>
-        <span>•</span> <span>GIT</span> <span>•</span> <span>HTML/CSS</span>
-        <span>•</span>
-      </div>
-    </div>
-
-    <div class="container">
-      <section id="about">
-        <div class="intro-text reveal">
-          "Mon parcours n'est pas linéaire, et c'est ma plus grande force. Gérer
-          la pression des rushs, coordonner des équipes dans l'urgence, analyser
-          des situations complexes...
-          <span class="intro-highlight"
-            >J'applique aujourd'hui cette rigueur millimétrée à l'ingénierie
-            logicielle.</span
-          >"
-        </div>
-
-        <div class="skills-container">
-          <div class="skill-col reveal">
-            <h3>Back-End & Data</h3>
-            <ul class="skill-list">
-              <li>Python</li>
-              <li>SQL</li>
-              <li>Java</li>
-              <li>PHP</li>
-              <li>C</li>
-            </ul>
-          </div>
-          <div class="skill-col reveal delay-1">
-            <h3>Front-End</h3>
-            <ul class="skill-list">
-              <li>JavaScript</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-            </ul>
-          </div>
-          <div class="skill-col reveal delay-2">
-            <h3>DevOps & Outils</h3>
-            <ul class="skill-list">
-              <li>Docker</li>
-              <li>Git / GitHub</li>
-              <li>Méthodologie Agile</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects">
-        <div class="section-header reveal">
-          <h2 class="section-title">Cas d'étude</h2>
-          <p style="color: var(--text-muted); max-width: 300px">
-            Sélection de projets développés récemment.
-          </p>
-        </div>
-
-        <a href="#" class="project-row hover-target reveal">
-          <div class="proj-year">2025</div>
-          <div class="proj-title">Application Yass-GYM</div>
-          <div class="proj-tags">
-            <span class="proj-tag">REACT-JS</span>
-            <span class="proj-tag">SQL</span>
-            <span class="proj-tag">HTML/CSS/JS</span>
-          </div>
-          <div class="proj-link">Voir le projet ↗</div>
-        </a>
-
-        <a href="#" class="project-row hover-target reveal">
-          <div class="proj-year">2025</div>
-          <div class="proj-title">Créations de Sites Web</div>
-          <div class="proj-tags">
-            <span class="proj-tag">JavaScript/HTML/CSS</span>
-            <span class="proj-tag">PHP</span>
-            <span class="proj-tag">WordPress</span>
-          </div>
-          <div class="proj-link">Voir le projet ↗</div>
-        </a>
-      </section>
-
-      <section id="parcours" style="border-bottom: none">
-        <div class="parcours-wrapper">
-          <div class="parcours-sticky reveal">
-            <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem)">
-              Parcours &<br />Évolution
-            </h2>
-            <p style="color: var(--text-muted); margin-top: 1rem">
-              L'alliance de la résilience opérationnelle et de l'ingénierie web.
+          <div class="hero-main">
+            <p class="status-chip reveal">
+              <span class="pulse" aria-hidden="true"></span>
+              <span>Actuellement développeur Full Stack à l'<strong>OIPC Genève</strong></span>
             </p>
+            <h1 id="hero-title" class="hero-title" aria-label="Yassin Baligh, développeur Full Stack">
+              <span class="split" data-split>Yassin</span>
+              <span class="split" data-split>Baligh</span>
+              <span class="hero-role">Développeur Full Stack</span>
+            </h1>
           </div>
 
-          <div class="parcours-list">
-            <div class="p-item hover-target reveal">
-              <div class="p-year">2025 — 2028</div>
-              <div class="p-content">
-                <h3 class="p-title">Développement Web & IA</h3>
-                <span class="p-company">CREA Genève</span>
-                <p class="p-desc">
-                  Formation d'ingénierie logicielle axée sur la création
-                  d'architectures web robustes et l'intégration de modèles
-                  d'intelligence artificielle.
-                </p>
-              </div>
+          <div class="hero-bottom">
+            <p class="hero-desc reveal">
+              Je conçois et développe des applications web complètes, de l'API à
+              l'interface : back-ends Java / PHP solides, front-ends React rapides
+              et un code pensé pour durer.
+            </p>
+            <div class="hero-actions reveal">
+              <a href="#projects" class="btn btn-light" data-magnetic>Voir les projets</a>
+              <a href="#contact" class="btn btn-ghost" data-magnetic>Démarrer un échange</a>
             </div>
-
-            <div class="p-item hover-target reveal">
-              <div class="p-year">2022 — 2025</div>
-              <div class="p-content">
-                <h3 class="p-title">Baccalauréat Géneral (Maturité Suisse)</h3>
-                <span class="p-company">Lycée International de Ferney-Voltaire</span>
-                <p class="p-desc">
-                  Approfondissement des structures de données, de l'algorithmique et des bases de la programmation (Python). Application des mathématiques discrètes au calcul informatique.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-item hover-target reveal">
-              <div class="p-year">2024 — 2025</div>
-              <div class="p-content">
-                <h3 class="p-title">Serveur en Restauration</h3>
-                <span class="p-company">Scalo 34 [Genève]</span>
-                <p class="p-desc">
-                  Développement d'une efficacité opérationnelle lors des pics
-                  d'activité. Respect strict des normes d'hygiène et travail
-                  d'équipe.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-item hover-target reveal">
-              <div class="p-year">Été 2024</div>
-              <div class="p-content">
-                <h3 class="p-title">Livreur</h3>
-                <span class="p-company">Fast Home [Ferney]</span>
-                <p class="p-desc">
-                  Acheminement rapide en zone urbaine. Accueil courtois et
-                  service à domicile de qualité.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-item hover-target reveal">
-              <div class="p-year">2022 — 2024</div>
-              <div class="p-content">
-                <h3 class="p-title">Équipier Polyvalent</h3>
-                <span class="p-company">McDonald's</span>
-                <p class="p-desc">
-                  Service efficace durant les rushs. Accueil et encaissements
-                  rapides dans un environnement sous haute pression.
-                </p>
-              </div>
-            </div>
+            <a href="#about" class="scroll-hint" aria-label="Défiler vers la section À propos">
+              <span class="mono">Scroll</span>
+              <span class="scroll-line" aria-hidden="true"></span>
+            </a>
           </div>
         </div>
       </section>
-    </div>
 
-    <section class="footer" id="contact">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="reveal">
-            <h2 class="footer-title">Démarrons<br />un projet.</h2>
-            <div class="contact-info" style="margin-top: 3rem">
-              <p class="hover-target">
-                <a href="mailto:yassinbaligh7@gmail.com"
-                  >yassinbaligh7@gmail.com</a
-                >
-              </p>
-              <p class="hover-target">
-                <a href="tel:+33787241750">+33 7 87 24 17 50</a>
-              </p>
+      <!-- ============ MARQUEE ============ -->
+      <div class="marquee" aria-label="Technologies maîtrisées">
+        <div class="marquee-track">
+          <ul class="marquee-group">
+            <li>React</li><li>Java</li><li>Jakarta EE</li><li>Symfony</li><li>Laravel</li>
+            <li>Vite</li><li>Tailwind CSS</li><li>Bootstrap</li><li>PHP</li><li>JavaScript</li><li>Python</li><li>SQL</li>
+            <li>Docker</li><li>Git</li>
+          </ul>
+          <ul class="marquee-group" aria-hidden="true">
+            <li>React</li><li>Java</li><li>Jakarta EE</li><li>Symfony</li><li>Laravel</li>
+            <li>Vite</li><li>Tailwind CSS</li><li>Bootstrap</li><li>PHP</li><li>JavaScript</li><li>Python</li><li>SQL</li>
+            <li>Docker</li><li>Git</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-label reveal">
+            <span class="mono">01</span>
+            <h2 id="about-title" class="mono">À propos</h2>
+          </div>
+
+          <p class="about-text" data-words>
+            Développeur Full Stack basé à Genève, je transforme des besoins métier en
+            applications fiables, performantes et agréables à utiliser. Mon parcours
+            m'a appris la rigueur, la gestion de la pression et le travail d'équipe :
+            je les mets aujourd'hui au service d'un code propre et maintenable.
+          </p>
+
+          <div class="about-grid">
+            <article class="about-card reveal">
+              <span class="mono card-index">A</span>
+              <h3>Actuellement</h3>
+              <p>Développeur Full Stack à l'OIPC Genève : conception, développement et maintenance d'applications web.</p>
+            </article>
+            <article class="about-card reveal">
+              <span class="mono card-index">B</span>
+              <h3>En formation</h3>
+              <p>Développement Web &amp; IA au CREA Genève (2025 — 2028), axé architecture logicielle et intégration de l'IA.</p>
+            </article>
+            <article class="about-card reveal">
+              <span class="mono card-index">C</span>
+              <h3>Approche</h3>
+              <p>Du back-end à l'interface : APIs robustes, UI soignées, performance, accessibilité et SEO.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ STACK ============ -->
+      <section id="stack" class="section stack" aria-labelledby="stack-title">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-label reveal">
+              <span class="mono">02</span>
+              <span class="mono">Stack technique</span>
+            </div>
+            <div>
+              <h2 id="stack-title" class="section-title reveal">Les outils<br />que je maîtrise.</h2>
+              <p class="stack-hint mono reveal">Survolez ou touchez une catégorie</p>
             </div>
           </div>
 
-          <div class="reveal delay-1">
-            <form class="minimal-form">
-              <input
-                type="text"
-                name="nom"
-                placeholder="Quel est votre nom ?"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Votre adresse email ?"
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="Votre message..."
-                required
-              ></textarea>
-
-              <button type="submit" class="magnetic-btn">
-                Envoyer le message
-              </button>
-            </form>
+          <div class="stack-grid">
+            <article class="stack-card reveal" data-glow data-rain tabindex="0">
+              <header>
+                <h3>Front-end</h3>
+                <span class="mono">07</span>
+              </header>
+              <ul class="chips">
+                <li data-icon="react">React</li><li data-icon="javascript">JavaScript</li><li data-icon="vite">Vite</li><li data-icon="tailwind">Tailwind CSS</li><li data-icon="bootstrap">Bootstrap</li><li data-icon="html5">HTML5</li><li data-icon="css3">CSS3</li>
+              </ul>
+            </article>
+            <article class="stack-card reveal" data-glow data-rain tabindex="0">
+              <header>
+                <h3>Back-end</h3>
+                <span class="mono">07</span>
+              </header>
+              <ul class="chips">
+                <li data-icon="java">Java</li><li data-short="JEE">Jakarta EE (JEE)</li><li data-icon="php">PHP</li><li data-icon="symfony">Symfony</li><li data-icon="laravel">Laravel</li><li data-icon="python">Python</li><li data-icon="c">C</li>
+              </ul>
+            </article>
+            <article class="stack-card reveal" data-glow data-rain tabindex="0">
+              <header>
+                <h3>Données</h3>
+                <span class="mono">02</span>
+              </header>
+              <ul class="chips">
+                <li data-icon="mysql">SQL</li><li data-short="MCD">Modélisation de bases de données</li>
+              </ul>
+            </article>
+            <article class="stack-card reveal" data-glow data-rain tabindex="0">
+              <header>
+                <h3>DevOps &amp; outils</h3>
+                <span class="mono">05</span>
+              </header>
+              <ul class="chips">
+                <li data-icon="docker">Docker</li><li data-icon="git">Git</li><li data-icon="github">GitHub</li><li data-icon="wordpress">WordPress</li><li data-short="Agile">Méthodologie Agile</li>
+              </ul>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div
-          style="
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            display: flex;
-            justify-content: space-between;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-          "
-        >
-          <span>© 2026 By Baligh Yassin.</span>
-          <div style="display: flex; gap: 2rem">
-            <a href="https://www.linkedin.com/in/yassin-baligh/" class="hover-target">LinkedIn</a>
-            <a href="https://github.com/Yass-Devv" class="hover-target">GitHub</a>
+      <!-- ============ PROJETS ============ -->
+      <section id="projects" class="section projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-label reveal">
+              <span class="mono">03</span>
+              <span class="mono">Projets sélectionnés</span>
+            </div>
+            <h2 id="projects-title" class="section-title reveal">Sites &amp;<br />applications.</h2>
           </div>
+
+          <div class="projects-grid">
+            <article class="project-card project-featured reveal">
+              <div class="project-link">
+                <figure class="project-media" data-tilt data-gallery>
+                  <img src="assets/projects/icdo-desktop-01.jpg" alt="Site de l'ICDO — page d'accueil" width="1600" height="900" loading="lazy" decoding="async" class="is-active" />
+                  <img src="assets/projects/icdo-desktop-02.jpg" alt="Site de l'ICDO — chiffres clés et présentation" width="1600" height="900" loading="lazy" decoding="async" />
+                  <img src="assets/projects/icdo-desktop-03.jpg" alt="Site de l'ICDO — activités principales" width="1600" height="900" loading="lazy" decoding="async" />
+                  <img src="assets/projects/icdo-desktop-04.jpg" alt="Site de l'ICDO — centre de coordination IMCC" width="1600" height="900" loading="lazy" decoding="async" />
+                  <span class="gallery-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                </figure>
+                <div class="phone-mockup" aria-hidden="true">
+                  <img src="assets/projects/icdo-mobile-01.jpg" alt="" width="390" height="844" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title-row">
+                  <h3>ICDO — Organisation internationale de protection civile</h3>
+                  <span class="mono">2026</span>
+                </div>
+                <p>
+                  Refonte complète du site de l'organisation intergouvernementale
+                  basée à Genève : actualités synchronisées en direct, site
+                  multilingue (EN, FR, AR, RU), accès à la plateforme de
+                  coordination IMCC et expérience entièrement responsive.
+                </p>
+                <ul class="tags">
+                  <li>React</li><li>TypeScript</li><li>Vite</li><li>Responsive</li><li>Multilingue</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-link" data-cursor="Explorer">
+                <figure class="project-media phone-scene" data-tilt>
+                  <img class="scene-bg" src="assets/projects/yassgym-desktop.jpg" alt="Page d'accueil de l'application Yass-GYM" width="1600" height="716" loading="lazy" decoding="async" />
+                  <div class="phones">
+                    <img src="assets/projects/yassgym-login.jpg" alt="Yass-GYM — écran de connexion" width="261" height="576" loading="lazy" decoding="async" />
+                    <img src="assets/projects/yassgym-profil.jpg" alt="Yass-GYM — choix du profil Homme ou Femme" width="262" height="573" loading="lazy" decoding="async" />
+                    <img src="assets/projects/yassgym-homme.jpg" alt="Yass-GYM — tableau de bord du profil Homme" width="265" height="579" loading="lazy" decoding="async" />
+                    <img src="assets/projects/yassgym-femme.jpg" alt="Yass-GYM — tableau de bord du profil Femme" width="261" height="575" loading="lazy" decoding="async" />
+                  </div>
+                </figure>
+              </div>
+              <div class="project-info">
+                <div class="project-title-row">
+                  <h3>Yass-GYM</h3>
+                  <span class="mono">2025</span>
+                </div>
+                <p>
+                  Application de suivi d'entraînement : authentification, profils
+                  Homme et Femme avec thème dédié, bibliothèque de 160 exercices,
+                  création de séances (séries, répétitions, charges) et historique
+                  de progression avec calories et série de jours.
+                </p>
+                <ul class="tags">
+                  <li>React</li><li>SQL</li><li>JavaScript</li><li>CSS</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <a href="https://github.com/Yass-Devv/portfolio" class="project-link" data-cursor="Code" target="_blank" rel="noopener" aria-label="Portfolio — voir le code sur GitHub">
+                <figure class="project-media" data-tilt>
+                  <img
+                    src="assets/projects/portfolio.svg"
+                    alt="Aperçu de ce portfolio"
+                    width="1600" height="1000" loading="lazy" decoding="async"
+                  />
+                </figure>
+              </a>
+              <div class="project-info">
+                <div class="project-title-row">
+                  <h3>Ce portfolio</h3>
+                  <span class="mono">2026</span>
+                </div>
+                <p>
+                  Site sans framework ni build : scène WebGL écrite à la main,
+                  animations au scroll, accessibilité, données structurées et
+                  SEO soignés, le tout en quelques kilo-octets.
+                </p>
+                <ul class="tags">
+                  <li>WebGL</li><li>JavaScript</li><li>CSS</li><li>SEO</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PARCOURS ============ -->
+      <!-- ============ RÉALISATIONS ============ -->
+      <section id="realisations" class="section works" aria-labelledby="works-title">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-label reveal">
+              <span class="mono">04</span>
+              <span class="mono">Réalisations</span>
+            </div>
+            <h2 id="works-title" class="section-title reveal">Plus de 50 sites<br />mis en ligne.</h2>
+          </div>
+
+          <div class="works-grid">
+            <div class="works-count reveal">
+              <p class="count" aria-label="Plus de 50">
+                <span class="count-plus" aria-hidden="true">+</span><span data-count="50" aria-hidden="true">50</span>
+              </p>
+              <p class="works-count-text">
+                sites et applications conçus, développés et livrés, des
+                plateformes connectées à l'IA jusqu'aux sites vitrines de
+                commerces locaux.
+              </p>
+            </div>
+
+            <ol class="works-list">
+              <li class="work-row reveal">
+                <span class="mono work-index">01</span>
+                <div>
+                  <h3>Plateformes de recherche d'emploi</h3>
+                  <p>Agrégation d'offres via des API externes et intégration de serveurs MCP (Model Context Protocol) pour connecter l'IA aux données.</p>
+                </div>
+                <ul class="work-tags"><li>API externes</li><li>MCP</li><li>IA</li></ul>
+              </li>
+              <li class="work-row reveal">
+                <span class="mono work-index">02</span>
+                <div>
+                  <h3>Applications web</h3>
+                  <p>Applications complètes avec comptes utilisateurs, base de données et tableaux de bord.</p>
+                </div>
+                <ul class="work-tags"><li>React</li><li>SQL</li></ul>
+              </li>
+              <li class="work-row reveal">
+                <span class="mono work-index">03</span>
+                <div>
+                  <h3>Salons de barbier</h3>
+                  <p>Sites au style affirmé qui mettent en valeur les prestations et l'univers de chaque salon.</p>
+                </div>
+                <ul class="work-tags"><li>Sur mesure</li></ul>
+              </li>
+              <li class="work-row reveal">
+                <span class="mono work-index">04</span>
+                <div>
+                  <h3>Restaurants &amp; coffee shops</h3>
+                  <p>Cartes, ambiance et informations pratiques pour donner envie de pousser la porte.</p>
+                </div>
+                <ul class="work-tags"><li>Responsive</li></ul>
+              </li>
+              <li class="work-row reveal">
+                <span class="mono work-index">05</span>
+                <div>
+                  <h3>Sites vitrines</h3>
+                  <p>Pour indépendants, commerces et entreprises : rapides, bien référencés et faciles à faire évoluer.</p>
+                </div>
+                <ul class="work-tags"><li>SEO</li><li>WordPress</li></ul>
+              </li>
+              <li class="work-row work-row-more reveal">
+                <span class="mono work-index">+</span>
+                <div>
+                  <h3>Et bien d'autres</h3>
+                  <p>Chaque projet part d'un besoin concret et se termine par un site en ligne.</p>
+                </div>
+                <a href="#contact" class="btn btn-pill" data-magnetic>Le vôtre ?</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="parcours" class="section parcours" aria-labelledby="parcours-title">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-label reveal">
+              <span class="mono">05</span>
+              <span class="mono">Parcours</span>
+            </div>
+            <h2 id="parcours-title" class="section-title reveal">Expérience<br />&amp; formation.</h2>
+          </div>
+
+          <div class="tabs reveal" role="tablist" aria-label="Catégories du parcours">
+            <button class="tab" role="tab" id="tab-dev" aria-controls="panel-dev" aria-selected="true">Développement</button>
+            <button class="tab" role="tab" id="tab-edu" aria-controls="panel-edu" aria-selected="false" tabindex="-1">Formation</button>
+            <button class="tab" role="tab" id="tab-other" aria-controls="panel-other" aria-selected="false" tabindex="-1">Hors dev</button>
+            <span class="tab-indicator" aria-hidden="true"></span>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-dev" aria-labelledby="tab-dev">
+            <ol class="timeline">
+              <li class="t-item">
+                <span class="t-period mono">Aujourd'hui</span>
+                <div class="t-body">
+                  <h3>Développeur Full Stack <span class="badge"><span class="pulse" aria-hidden="true"></span>En poste</span></h3>
+                  <p class="t-org">OIPC — Genève <span class="t-note mono">En alternance</span></p>
+                  <p class="t-desc">
+                    Développement d'applications web de bout en bout : conception
+                    des fonctionnalités, back-end, interfaces utilisateur,
+                    maintenance et évolution des outils existants. Refonte du
+                    site institutionnel de l'organisation en React, TypeScript et Vite.
+                  </p>
+                </div>
+              </li>
+              <li class="t-item">
+                <span class="t-period mono">2025</span>
+                <div class="t-body">
+                  <h3>Création de sites web — plus de 50 projets</h3>
+                  <p class="t-org">Projets indépendants</p>
+                  <p class="t-desc">
+                    Plateformes de recherche d'emploi connectées à des API externes
+                    et à des serveurs MCP, applications web, sites de barbiers,
+                    restaurants, coffee shops et sites vitrines (PHP, WordPress,
+                    React), de la maquette à la mise en ligne.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-edu" aria-labelledby="tab-edu" hidden>
+            <ol class="timeline">
+              <li class="t-item">
+                <span class="t-period mono">2025 — 2028</span>
+                <div class="t-body">
+                  <h3>Développement Web &amp; IA</h3>
+                  <p class="t-org">CREA Genève</p>
+                  <p class="t-desc">
+                    Formation en ingénierie logicielle axée sur la conception
+                    d'architectures web robustes et l'intégration de modèles
+                    d'intelligence artificielle.
+                  </p>
+                </div>
+              </li>
+              <li class="t-item">
+                <span class="t-period mono">2022 — 2025</span>
+                <div class="t-body">
+                  <h3>Baccalauréat général</h3>
+                  <p class="t-org">Lycée International de Ferney-Voltaire</p>
+                  <p class="t-desc">
+                    Structures de données, algorithmique et bases de la
+                    programmation en Python. Mathématiques discrètes appliquées
+                    à l'informatique.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-other" aria-labelledby="tab-other" hidden>
+            <p class="panel-intro">
+              Des expériences hors du développement qui m'ont appris à rester
+              efficace sous pression, à travailler en équipe et à servir
+              l'utilisateur final.
+            </p>
+            <ol class="timeline">
+              <li class="t-item">
+                <span class="t-period mono">2024 — 2025</span>
+                <div class="t-body">
+                  <h3>Serveur en restauration</h3>
+                  <p class="t-org">Scalo 34 — Genève</p>
+                  <p class="t-desc">Efficacité opérationnelle pendant les pics d'activité, respect strict des normes d'hygiène, travail d'équipe.</p>
+                </div>
+              </li>
+              <li class="t-item">
+                <span class="t-period mono">Été 2024</span>
+                <div class="t-body">
+                  <h3>Livreur</h3>
+                  <p class="t-org">Fast Home — Ferney-Voltaire</p>
+                  <p class="t-desc">Livraisons rapides en zone urbaine, relation client et service à domicile de qualité.</p>
+                </div>
+              </li>
+              <li class="t-item">
+                <span class="t-period mono">2022 — 2024</span>
+                <div class="t-body">
+                  <h3>Équipier polyvalent</h3>
+                  <p class="t-org">McDonald's</p>
+                  <p class="t-desc">Service durant les rushs, accueil et encaissement dans un environnement à forte pression.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ CONTACT ============ -->
+    <footer id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-label light reveal">
+          <span class="mono">06</span>
+          <span class="mono">Contact</span>
+        </div>
+
+        <h2 id="contact-title" class="contact-title">
+          <span class="split" data-split data-split-scroll>Parlons de</span>
+          <span class="split accent" data-split data-split-scroll>votre projet.</span>
+        </h2>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <a href="mailto:yassinbaligh7@gmail.com" class="contact-mail" data-cursor="Écrire">yassinbaligh7@gmail.com</a>
+            <a href="tel:+33787241750" class="contact-phone">+33 7 87 24 17 50</a>
+            <ul class="socials">
+              <li><a href="https://www.linkedin.com/in/yassin-baligh/" target="_blank" rel="noopener" data-magnetic>LinkedIn</a></li>
+              <li><a href="https://github.com/Yass-Devv" target="_blank" rel="noopener" data-magnetic>GitHub</a></li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" novalidate>
+            <div class="field">
+              <input type="text" id="f-name" name="nom" autocomplete="name" placeholder=" " required />
+              <label for="f-name">Votre nom</label>
+            </div>
+            <div class="field">
+              <input type="email" id="f-email" name="email" autocomplete="email" placeholder=" " required />
+              <label for="f-email">Votre email</label>
+            </div>
+            <div class="field">
+              <textarea id="f-msg" name="message" rows="4" placeholder=" " required></textarea>
+              <label for="f-msg">Votre message</label>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="btn btn-accent" data-magnetic>Envoyer le message</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> Yassin Baligh</span>
+          <span class="mono">Développeur Full Stack — Genève</span>
+          <a href="#top" class="to-top">Retour en haut</a>
         </div>
       </div>
-    </section>
-    <script src="email.min.js"></script>
-
-    <script src="script.js"></script>
+    </footer>
   </body>
 </html>
