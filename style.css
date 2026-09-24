@@ -651,9 +651,10 @@ html:not(.js) .drop {
     display: none;
   }
 }
-@media (max-width: 760px) {
+/* Pas d'animation sur téléphone / tablette tactile */
+@media (max-width: 760px), (hover: none) and (pointer: coarse) {
   .drop {
-    height: 280vh;
+    display: none;
   }
 }
 

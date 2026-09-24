@@ -6,6 +6,8 @@
 // ==========================================
 const section = document.querySelector("[data-drop]");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+// Pas d'animation sur téléphone / tablette tactile (même requête que dans style.css)
+const isMobile = window.matchMedia("(max-width: 760px), (hover: none) and (pointer: coarse)").matches;
 
 const hasWebGL = () => {
   try {
@@ -17,7 +19,7 @@ const hasWebGL = () => {
 };
 
 if (section) {
-  if (reduceMotion || !hasWebGL()) {
+  if (reduceMotion || isMobile || !hasWebGL()) {
     section.remove();
   } else {
     const io = new IntersectionObserver(
