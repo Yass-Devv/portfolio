@@ -6,7 +6,7 @@
     <title>Yassin Baligh — Développeur Full Stack à Genève</title>
     <meta
       name="description"
-      content="Yassin Baligh, développeur Full Stack à Genève, actuellement chez l'OIPC. Plus de 50 sites livrés. React, Java / Jakarta EE, Symfony, Laravel, PHP, SQL, Docker."
+      content="Yassin Baligh, développeur Full Stack à Genève, actuellement chez l'OIPC. Plus de 50 sites conçus. React, Java / Jakarta EE, Symfony, Laravel, PHP, SQL, Docker."
     />
     <meta name="author" content="Yassin Baligh" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -70,7 +70,7 @@
         "address": { "@type": "PostalAddress", "addressLocality": "Genève", "addressCountry": "CH" },
         "knowsAbout": [
           "React", "JavaScript", "Vite", "Tailwind CSS", "Bootstrap", "Java", "Jakarta EE", "PHP", "Symfony", "Laravel",
-          "Python", "SQL", "Docker", "Git", "WordPress", "API REST", "MCP (Model Context Protocol)", "Développement web", "Intelligence artificielle"
+          "Python", "SQL", "MySQL", "PostgreSQL", "Oracle", "Docker", "Git", "WordPress", "API REST", "MCP (Model Context Protocol)", "Chatbots IA","Développement web", "Intelligence artificielle"
         ],
         "sameAs": ["https://www.linkedin.com/in/yassin-baligh/", "https://github.com/Yass-Devv"]
       }
@@ -79,6 +79,15 @@
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
     <script src="email.min.js" defer></script>
     <script src="script.js" defer></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script src="laptop.js" type="module"></script>
   </head>
 
   <body>
@@ -163,6 +172,16 @@
         </div>
       </div>
 
+      <!-- ============ CHUTE DE L'ORDINATEUR (3D au scroll) ============ -->
+      <div class="drop" data-drop aria-hidden="true">
+        <div class="drop-sticky">
+          <canvas class="drop-canvas"></canvas>
+          <p class="drop-hint mono">Faites défiler</p>
+          <p class="drop-caption"><span>Du code</span><span>à l'écran.</span></p>
+          <div class="drop-veil"></div>
+        </div>
+      </div>
+
       <!-- ============ ABOUT ============ -->
       <section id="about" class="section about" aria-labelledby="about-title">
         <div class="container">
@@ -234,10 +253,10 @@
             <article class="stack-card reveal" data-glow data-rain tabindex="0">
               <header>
                 <h3>Données</h3>
-                <span class="mono">02</span>
+                <span class="mono">05</span>
               </header>
               <ul class="chips">
-                <li data-icon="mysql">SQL</li><li data-short="MCD">Modélisation de bases de données</li>
+                <li data-short="SQL">SQL</li><li data-icon="mysql">MySQL</li><li data-icon="postgresql">PostgreSQL</li><li data-icon="oracle">Oracle</li><li data-short="MCD">Modélisation de bases de données</li>
               </ul>
             </article>
             <article class="stack-card reveal" data-glow data-rain tabindex="0">
@@ -362,7 +381,7 @@
               <span class="mono">04</span>
               <span class="mono">Réalisations</span>
             </div>
-            <h2 id="works-title" class="section-title reveal">Plus de 50 sites<br />mis en ligne.</h2>
+            <h2 id="works-title" class="section-title reveal">Plus de 50 sites<br />conçus.</h2>
           </div>
 
           <div class="works-grid">
@@ -371,7 +390,7 @@
                 <span class="count-plus" aria-hidden="true">+</span><span data-count="50" aria-hidden="true">50</span>
               </p>
               <p class="works-count-text">
-                sites et applications conçus, développés et livrés, des
+                sites et applications conçus et développés, des
                 plateformes connectées à l'IA jusqu'aux sites vitrines de
                 commerces locaux.
               </p>
@@ -422,7 +441,7 @@
                 <span class="mono work-index">+</span>
                 <div>
                   <h3>Et bien d'autres</h3>
-                  <p>Chaque projet part d'un besoin concret et se termine par un site en ligne.</p>
+                  <p>Chaque projet part d'un besoin concret et aboutit à un site ou une application sur mesure.</p>
                 </div>
                 <a href="#contact" class="btn btn-pill" data-magnetic>Le vôtre ?</a>
               </li>
@@ -444,14 +463,13 @@
           <div class="tabs reveal" role="tablist" aria-label="Catégories du parcours">
             <button class="tab" role="tab" id="tab-dev" aria-controls="panel-dev" aria-selected="true">Développement</button>
             <button class="tab" role="tab" id="tab-edu" aria-controls="panel-edu" aria-selected="false" tabindex="-1">Formation</button>
-            <button class="tab" role="tab" id="tab-other" aria-controls="panel-other" aria-selected="false" tabindex="-1">Hors dev</button>
             <span class="tab-indicator" aria-hidden="true"></span>
           </div>
 
           <div class="tab-panel" role="tabpanel" id="panel-dev" aria-labelledby="tab-dev">
             <ol class="timeline">
               <li class="t-item">
-                <span class="t-period mono">Aujourd'hui</span>
+                <span class="t-period mono"></span>
                 <div class="t-body">
                   <h3>Développeur Full Stack <span class="badge"><span class="pulse" aria-hidden="true"></span>En poste</span></h3>
                   <p class="t-org">OIPC — Genève <span class="t-note mono">En alternance</span></p>
@@ -464,15 +482,40 @@
                 </div>
               </li>
               <li class="t-item">
+                <span class="t-period mono"></span>
+                <div class="t-body">
+                  <h3>Conception de bases de données</h3>
+                  <p class="t-org">OIPC — Genève <span class="t-note mono">En entreprise</span></p>
+                  <p class="t-desc">
+                    Analyse des besoins, modélisation des données (MCD / MLD) et
+                    création des bases de données relationnelles : schémas,
+                    tables, relations et contraintes d'intégrité.
+                  </p>
+                </div>
+              </li>
+              <li class="t-item">
                 <span class="t-period mono">2025</span>
                 <div class="t-body">
-                  <h3>Création de sites web — plus de 50 projets</h3>
+                  <h3>Création de chatbots &amp; assistants IA</h3>
                   <p class="t-org">Projets indépendants</p>
                   <p class="t-desc">
-                    Plateformes de recherche d'emploi connectées à des API externes
-                    et à des serveurs MCP, applications web, sites de barbiers,
-                    restaurants, coffee shops et sites vitrines (PHP, WordPress,
-                    React), de la maquette à la mise en ligne.
+                    Conception et intégration de chatbots et d'assistants IA
+                    modernes : interfaces conversationnelles, connexion aux
+                    modèles de langage et aux données métier via API et serveurs MCP.
+                  </p>
+                </div>
+              </li>
+              <li class="t-item">
+                <span class="t-period mono">2024 — Aujourd'hui</span>
+                <div class="t-body">
+                  <h3>Créateur d'applications web modernes — plus de 50 projets</h3>
+                  <p class="t-org">Projets indépendants</p>
+                  <p class="t-desc">
+                    Conception et développement d'applications web modernes et de
+                    sites sur mesure : plateformes de recherche d'emploi connectées
+                    à des API externes et à des serveurs MCP, applications web,
+                    sites de barbiers, restaurants, coffee shops et sites vitrines
+                    (PHP, WordPress, React), de la maquette au produit fini.
                   </p>
                 </div>
               </li>
@@ -482,61 +525,35 @@
           <div class="tab-panel" role="tabpanel" id="panel-edu" aria-labelledby="tab-edu" hidden>
             <ol class="timeline">
               <li class="t-item">
-                <span class="t-period mono">2025 — 2028</span>
+                <span class="t-period mono"></span>
                 <div class="t-body">
-                  <h3>Développement Web &amp; IA</h3>
+                  <h3>Bachelor en Développement Web &amp; IA</h3>
                   <p class="t-org">CREA Genève</p>
                   <p class="t-desc">
-                    Formation en ingénierie logicielle axée sur la conception
-                    d'architectures web robustes et l'intégration de modèles
-                    d'intelligence artificielle.
+                    Formation complète en ingénierie logicielle, du front-end au
+                    back-end : HTML, CSS, JavaScript et React côté interface ;
+                    PHP, Symfony, Laravel, Java / Jakarta EE et Python côté serveur ;
+                    conception et administration de bases de données (MySQL,
+                    PostgreSQL, Oracle) ; API REST, architecture logicielle,
+                    DevOps (Git, Docker), méthodes Agiles, UX / UI et
+                    intégration de modèles d'intelligence artificielle.
                   </p>
                 </div>
               </li>
               <li class="t-item">
-                <span class="t-period mono">2022 — 2025</span>
+                <span class="t-period mono"></span>
                 <div class="t-body">
                   <h3>Baccalauréat général</h3>
-                  <p class="t-org">Lycée International de Ferney-Voltaire</p>
+                  <p class="t-org">Lycée International de Ferney-Voltaire <span class="t-note mono">Spécialités Mathématiques &amp; NSI</span></p>
                   <p class="t-desc">
-                    Structures de données, algorithmique et bases de la
-                    programmation en Python. Mathématiques discrètes appliquées
+                    Spécialités Mathématiques et Numérique et Sciences
+                    Informatiques (NSI). Programmation en Python, algorithmique
+                    et structures de données (listes, piles, files, arbres,
+                    graphes), bases de données et langage SQL, réseaux et
+                    architecture des ordinateurs. En mathématiques : analyse,
+                    probabilités, logique et mathématiques discrètes appliquées
                     à l'informatique.
                   </p>
-                </div>
-              </li>
-            </ol>
-          </div>
-
-          <div class="tab-panel" role="tabpanel" id="panel-other" aria-labelledby="tab-other" hidden>
-            <p class="panel-intro">
-              Des expériences hors du développement qui m'ont appris à rester
-              efficace sous pression, à travailler en équipe et à servir
-              l'utilisateur final.
-            </p>
-            <ol class="timeline">
-              <li class="t-item">
-                <span class="t-period mono">2024 — 2025</span>
-                <div class="t-body">
-                  <h3>Serveur en restauration</h3>
-                  <p class="t-org">Scalo 34 — Genève</p>
-                  <p class="t-desc">Efficacité opérationnelle pendant les pics d'activité, respect strict des normes d'hygiène, travail d'équipe.</p>
-                </div>
-              </li>
-              <li class="t-item">
-                <span class="t-period mono">Été 2024</span>
-                <div class="t-body">
-                  <h3>Livreur</h3>
-                  <p class="t-org">Fast Home — Ferney-Voltaire</p>
-                  <p class="t-desc">Livraisons rapides en zone urbaine, relation client et service à domicile de qualité.</p>
-                </div>
-              </li>
-              <li class="t-item">
-                <span class="t-period mono">2022 — 2024</span>
-                <div class="t-body">
-                  <h3>Équipier polyvalent</h3>
-                  <p class="t-org">McDonald's</p>
-                  <p class="t-desc">Service durant les rushs, accueil et encaissement dans un environnement à forte pression.</p>
                 </div>
               </li>
             </ol>
